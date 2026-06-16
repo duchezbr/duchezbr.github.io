@@ -1,83 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Coming Soon</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-    .container {
-      max-width: 600px;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-    .tagline {
-      color: #555;
-      font-style: italic;
-    }
-    .download-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #0078D4;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  .download-btn:hover {
-    background: #005ea6;
-  }
-  
-  .small-text {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brian DuChez | Statistical Process Control Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+
+}
+
+/* ---------- Navigation ---------- */
+nav{
+
+    background:#0078D4;
+    padding:15px;
+
+}
+nav ul{
+
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+
+}
+nav a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+nav a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ---------- Hero ---------- */
+.hero{
+
+    text-align:center;
+    padding:60px 20px;
+
+}
+.hero h1{
+
+    font-size:3rem;
+    margin-bottom:15px;
+
+}
+.hero p{
+
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+    font-size:1.15rem;
+
+}
+.download-btn{
+
+    display:inline-block;
+    background:#0078D4;
+    color:white;
+    padding:14px 30px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+.download-btn:hover{
+
+    background:#005ea6;
+
+}
+
+/* ---------- Cards ---------- */
+.projects{
+
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+
+}
+.card{
+
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    margin-bottom:50px;
+
+}
+.card img{
+
+    width:100%;
+    display:block;
+
+}
+.card-content{
+
+    padding:30px;
+
+}
+.card h2{
+
+    margin-bottom:15px;
+
+}
+.card p{
+
+    margin-bottom:20px;
+
+}
+.button{
+
+    display:inline-block;
+    background:#0078D4;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:5px;
+
+}
+.button:hover{
+
+    background:#005ea6;
+
+}
+
+footer{
+
+    text-align:center;
+    padding:30px;
+    color:#666;
+
+}
+
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Portfolio Coming Soon</h1>
-  
-    <p class="tagline">
-      I'm building something great — a showcase of my Power BI work.
-    </p>
-  
-    <p>
-      This site is currently under development. In the meantime, you can explore
-      an early demonstration of a Statistical Process Control (SPC) Power BI report.
-    </p>
-  
-    <a href="https://github.com/duchezbr/Statistical-Process-Control-Power-BI/raw/main/SPC_v1.pbix"
-       class="download-btn">
-       Download SPC Power BI Report (.pbix)
-    </a>
-  
-    <p class="small-text">
-      Demo report provided for portfolio evaluation purposes. Documentation,
-      screenshots, and additional projects will be added soon.
-    </p>
-  </div>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="ControlChartDAX.html">Control Chart DAX</a></li>
+
+<li><a href="ProcessCapabilityDAX.html">Process Capability DAX</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>Statistical Process Control Power BI</h1>
+
+<p>
+
+This project demonstrates a complete Statistical Process Control reporting
+solution built in Power BI using custom DAX calculations, dynamic control
+limits, process capability analysis, and interactive views.
+
+</p>
+
+<a
+class="download-btn"
+href="https://github.com/duchezbr/Statistical-Process-Control-Power-BI/raw/main/SPC_v1.pbix">
+
+Download Power BI Report (.pbix)
+
+</a>
+
+</section>
+
+<section class="projects">
+
+<div class="card">
+
+<img src="images/control-chart.png"
+alt="Control Chart Report Screenshot">
+
+<div class="card-content">
+
+<h2>Individuals & Moving Range Control Chart</h2>
+
+<p>
+
+Interactive SPC dashboard with automatic calculation of control limits,
+moving ranges, outlier detection, and dynamic tooltips.
+
+</p>
+
+<a class="button"
+href="ControlChartDAX.html">
+
+View DAX Documentation
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/process-capability.png"
+alt="Process Capability Report Screenshot">
+
+<div class="card-content">
+
+<h2>Process Capability Analysis</h2>
+
+<p>
+
+Process capability dashboard including Pp, Ppk,
+histograms, and specification limit analysis.
+
+</p>
+
+<a class="button"
+href="ProcessCapabilityDAX.html">
+
+View DAX Documentation
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+Power BI • DAX • Statistical Process Control • Portfolio Project
+
+</footer>
+
 </body>
 </html>
-
